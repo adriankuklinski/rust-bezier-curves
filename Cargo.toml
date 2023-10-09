@@ -3,14 +3,6 @@ name = "rust-bezier-curves"
 version = "0.1.0"
 edition = "2021"
 
-[toolchain]
-channel = "nightly"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[workspace]
-resolver = "2" # Important! wgpu/Bevy needs this!
-
-
 # Enable a small amount of optimization in debug mode
 [profile.dev]
 opt-level = 1
@@ -18,7 +10,6 @@ opt-level = 1
 # Enable high optimizations for dependencies (incl. Bevy), but not for our code:
 [profile.dev.package."*"]
 opt-level = 3
-
 
 [dependencies]
 bevy = { version = "0.11.3", features = ["dynamic_linking"] }
